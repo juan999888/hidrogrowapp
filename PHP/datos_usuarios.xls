@@ -1,0 +1,25 @@
+e<table>
+
+<caption> Datos Cultivos</caption>
+<tr>
+    <th>Id cultivo</th>
+    <th>Nombre</th>
+    <th>Especie</th>
+    <th>Cantidad</th>
+    <th>Fecha siembra</th>
+    <th>Descripcion</th>
+</tr>
+
+
+<tr>
+    <td>6</td>
+    <td>sandraf3</td>
+    <td>sami</td>
+    <td>57</td>
+    <td>1010182949</td>
+    <td>sandraflorez14@yahoo.com</td>
+    <td>2</td>
+</tr>
+
+
+</table>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="eliminar cultivo.css" type="text/css">
+    <link rel="stylesheet" href="links.css" type="text/css">
+</head>
+<body>
+  <div id='frame4' class='frame4'>
+    <div id='rectangle45' class='rectangle45'>
+    </div>
+    <img src="slogobw.png" id='rectangle46' class='rectangle46'>
+    
+    <div id='menu_sup' class='menu_sup'>
+      <a href="inicio_na (administrador).html">|inicio</a><a href="libros nad (administrador).html">| Libros digitales </a><a href="dashboard_administrador.php">| dash board </a><a href="PHP/cerrar_sesion.php">|Cerrar sesion</a></div>
+    <div id='rectangle47' class='rectangle47'>
+        <div class="container">
+            <div class="logo">
+            </div>
+            <h1>Eliminar cultivo</h1>
+            <form action="PHP/cultivo_eliminado (administrador).php" method="post">
+              <div class="form-group">
+                <label for="n_cl">Nombre de cultivo:</label>
+                <input type="text" class="form-control" id="username" placeholder="Introduce el nombre de cultivo" name="n_cl" required>
+                <BR></BR><BR>
+              </div>
+              <div class="form-group">
+                <label for="id_c">ID del cultivo</label>
+                <input type="text" class="form-control" id="id_c" placeholder="Introduce el ID del cultivo" name="id_c" required>
+                <BR></BR><BR>
+              </div>
+              <div class="form-group">
+                <label for="especie">especie</label>
+                <select name="especie" id="especie">
+                  <option value="1">tomate</option>
+                  <option value="2">lechuga</option>
+                  <option value="3">tomate</option>
+                </select>
+            </BR><BR></BR>
+              </div>
+            <button type="submit" class="btn">Eliminar</button>
+            <div class="links">
+              <br>
+            </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+</body>
+</html>

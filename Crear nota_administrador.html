@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nota</title>
+    <link rel="stylesheet" href="CSS/index.css" type="text/css">
+</head>
+<body>
+  <nav class="nav-index-dos">
+    <img class="logo" src="IMG/slogobw.png" alt="">
+  <div id="div-nav">
+    <a class="nav-dos" href="inicio_na (administrador).html">INICIO</a>
+    <a class="nav-dos" href="libros nad (administrador).html">LIBROS</a>
+    <a id="nav-dos" href="dashboard_administrador.php">VOLVER</a>
+  </div> 
+</nav>
+    <article class="caja-blur">
+      <center>
+        <div class="container-login">
+          <h1 class="color-fuente-registro">Crear nota</h1>
+          <form action="PHP/crear notas(administrador).php" method="post">
+              <div class="input-container"><br>
+                  <label class="color-fuente-registro" class="label" for="nombre">Nombre:</label><br>
+                  <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required>
+                  <br>
+              </div>
+              <div class="input-container">
+                  <br>
+                  <label class="color-fuente-registro" class="label" for="Etiqueta">Etiqueta:</label><br>
+                  <select class="form-control" name="Etiqueta" required>
+                      <option value="">Seleccione una opción</option>
+                      <option value="importante">importante</option>
+                      <option value="Poco importante">Poco importante</option>
+                      <option value="Medio importante">Medio importante</option>
+                      <option value="Muy importante">Muy importante</option>
+                  </select>
+                  <div class="input-container">
+                      <br>
+                      <label class="color-fuente-registro" class="label" for="nota">Nota:</label><br>
+                      <textarea name="nota" id="" class="form-control" maxlength="150" required></textarea>
+                  </div><br>
+                  </div>
+                  <button class="btn-login" type="submit">Crear</button>
+              </div>
+          </form>     
+        </div>
+      </div>
+  </div>
+        </div>
+      </center>
+    </article>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="CSS/index.css" type="text/css">
+</head>
+<body>
+  <nav class="nav-index">
+    <img class="logo" src="IMG/slogo.png" alt="">
+  <div id="div-nav">
+    <a class="nav" href="index.html">INICIO</a>
+    <a class="nav" href="libros.html">LIBROS</a>
+    <a id="nav" href="registro.html">REGISTRO</a>
+    <a class="nav" href="inicio sesion.html">INICIAR SESIÓN</a>
+  </div>
+</nav>
+  <article class="caja-blur"><br><br><br><br>
+  <center>
+    <div class="container-login">
+      <h1 class="color-fuente-registro">Registrate</h1>
+      <form action="PHP/registro_h.php" method="post">
+        <div class="container-control-uno">
+          <label class="color-fuente-registro" for="username">Nombre de usuario:</label><br>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Introduce tu nombre de usuario" required maxlength="45">
+        </div>
+  
+        <div class="container-control-dos">
+          <label class="color-fuente-registro" for="name">Nombre:</label><br>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" required maxlength="45" pattern="^[a-zA-Z\s]+$">
+        </div>
+        
+        <div class="container-control-tres">
+          <label class="color-fuente-registro" for="correo">Correo electrónico:</label><br>
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo electrónico" required maxlength="45">
+        </div>
+        
+        <div class="container-control-cuatro">
+          <label class="color-fuente-registro" for="password">Contraseña:</label><br>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required maxlength="20" minlength="10">
+        </div>
+  
+        <div class="container-control-cinco">
+          <label class="color-fuente-registro" for="phone">Teléfono:</label><br>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Introduce tu teléfono" required minlength="10" pattern="^[0-9]+$">
+        </div>
+        <div class="container-control-seis">
+          <label class="color-fuente-registro" for="documento_">Numero de documento:</label><br>
+          <input type="tel" class="form-control" id="documento_" name="documento_" placeholder="Introduce tu numero de documento" required minlength="8" pattern="^[0-9]+$">
+      </div>
+        <div class="container-control-siete">
+          <label class="color-fuente-registro" for="t_d">Tipo documento</label><br>
+          <select name="t_d" id="t_d">
+            <option value="1">C.C</option>
+            <option value="2">T.I</option>
+            <option value="3">C.E</option>
+            <option value="4">Otro</option>
+          </select>
+      
+        </div>
+        <div class="container-control-siete">
+          <label class="color-fuente-registro" for="area">Area</label><br>
+          <select name="area" id="area">
+            <option value="Control de plagas">Control de plagas y enfermedades</option>
+            <option value="Manipulación de nutrientes">Manipulación de nutrientes</option>
+            <option value="Supervisión del crecimiento">Supervisión del crecimiento de las plantas</option>
+          </select>
+      
+        </div>
+        <div class="container-control-ocho">
+          <label class="color-fuente-registro" for="gender">Género:</label><br>
+          <input type="radio" class="form-control" id="male" name="gender" value="2">
+          <label class="color-fuente-registro" for="gender">Masculino</label>
+          <input type="radio" class="form-control" id="female" name="gender" value="1">
+          <label class="color-fuente-registro" for="gender">Femenino</label>
+        </div>
+      <input type="submit" id="btn" class="btn" name="registrar" value="Registrar">
+      </form>
+    </div>
+  </div>
+  </center>
+</article>
+<footer class="footer-index">
+  <table class="table-index" >
+      <tr>
+          <th class="th-index">Politicas de Privacidad</th>
+          <th class="th-index">Nuestras Redes</th>
+          <th class="th-index">Dirección</th>
+          <th class="th-index">Teléfono</th>
+      </tr>
+      <tr>
+          <td class="td-index"><img class="img-footer" src="IMG/facebook.png" alt=""></td>
+          <td class="td-index">Facebook</td>
+          <td class="td-index">Calle 69c #200f-89 </td>
+          <td class="td-index">+57 3001678029</td>
+      </tr><tr>
+          <td class="td-index"><img class="img-footer" src="IMG/instagram.png" alt=""></td>
+          <td class="td-index">Instagram</td>
+          <td class="td-index">Cra 100 #105b-95</td>
+          <td class="td-index">+57 3206557898</td>
+      </tr>
+  </table>
+</footer>
+</body>
+</html>      

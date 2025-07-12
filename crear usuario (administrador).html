@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear usuario</title>
+  <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+  <nav class="nav-index-dos">
+    <img class="logo" src="IMG/slogobw.png" alt="">
+  <div id="div-nav">
+    <a class="nav-dos" href="inicio_na (administrador).html">INICIO</a>
+    <a class="nav-dos" href="libros nad (administrador).html">LIBROS</a>
+    <a id="nav-dos" href="dashboard_administrador.php">VOLVER</a>
+  </div>
+</nav>
+    </div>
+            <article class="caja-blur">
+              <center>
+                <div class="container-login">
+                  <h1 class="color-fuente-registro">Crear usuario</h1>
+            <form action="PHP/usuario creado (administrador).php" method="post">
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="username">Nombre de usuario:</label><br>
+                <input type="text" class="form-control-login" id="username" name="username" placeholder="Introduce tu nombre de usuario" required>
+              </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="name">Nombre:</label><br>
+                <input type="text" class="form-control-login" id="name" name="name" placeholder="Introduce tu nombre" required>
+              </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="email">Correo electrónico:</label><br>
+                <input type="email" class="form-control-login" id="email" name="email" placeholder="Introduce tu correo electrónico" required>
+              </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="password">Contraseña:</label><br>
+                <input type="password" class="form-control-login" id="password" name="password" placeholder="Introduce tu contraseña" required>
+              </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="phone">Teléfono:</label><br>
+                <input type="tel" class="form-control-login" id="phone" placeholder="Introduce tu teléfono" name="phone" required>
+              </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="documento">Numero de documento:</label>
+                <input type="number" class="form-control-login" id="n_doc" name="documento" placeholder="Introduce tu numero de documento" required>
+            </div>
+            <div class="form-group-login"> 
+              <label class="color-fuente-registro" for="Rol">Rol</label><br>
+              <select name="Rol" id="Rol">
+                <option value="1">Administrador</option>
+                <option value="2">Hidroponista</option>
+              </select>
+            </div>
+            <div class="form-group-login">
+              <label class="color-fuente-registro" for="t_d">Tipo documento</label><br>
+              <select name="t_d" id="t_d">
+                <option value="1">C.C</option>
+                <option value="2">T.I</option>
+                <option value="3">C.E</option>
+                <option value="4">Otro</option>
+              </select>
+            </div>
+              <div class="form-group-login">
+                <label class="color-fuente-registro" for="gender">Género:</label><br>
+                <label class="color-fuente-registro" for="Femenino">Femenino</label><br>
+                <input class="color-fuente-registro" type="radio" class="form-control-login" id="male" name="gender" value="1"><br>
+                <label class="color-fuente-registro"for="Masculino">Masculino</label>
+                <input type="radio" class="form-control-login" id="female" name="gender" value="2">
+              </div>
+               <button type="submit" class="btn-login">Crear</button>
+            </form>
+          </div>
+        </div>
+                </div>
+              </center>
+            </article>
+</body>
+</html>     
+
+

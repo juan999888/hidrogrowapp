@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nota hidroponista</title>
+   <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <nav class="nav-index-dos">
+        <img class="logo" src="IMG/slogobw.png" alt="">
+      <div id="div-nav">
+        <a class="nav-dos" href="inicio_n (hidroponista).html">INICIO</a>
+        <a class="nav-dos" href="libros n (hidroponista).html">LIBROS</a>
+        <a id="nav-dos" href="dashboard_hidroponista (hidroponista).php">VOLVER</a>
+      </div>
+    </nav> 
+        <article class="caja-blur" style="height: 630px;">
+            <center>
+                <div class="container-login">
+      <h1 class="color-fuente-registro">Registrar nota</h1>
+        <form action="PHP/crear notas(hidro).php" method="post">
+        <div class="input-container">
+        <br>
+        <label class="color-fuente-registro" class="label" for="nombre">Nombre:</label><br><br>
+        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre">
+        </div>
+        <div class="input-container">
+        <label class="color-fuente-registro" class="label" for="Etiqueta">Etiqueta:</label><br><br>
+        <select class="form-control" name="Etiqueta" required>
+            <option value="">Seleccione una opción</option>
+            <option value="importante">importante</option>
+            <option value="Poco importante">Poco importante</option>
+            <option value="Medio importante">Medio importante</option>
+            <option value="Muy importante">Muy importante</option>
+        </select>
+  <br>
+    <br>
+    <label class="color-fuente-registro" class="label" for="nota">Nota:</label><br><br>
+    <textarea name="nota" id="" class="form-control" maxlength="150" required></textarea><br><br>
+    <button type="submit" class="btn-login">Crear</button>
+    </form>     
+            </center>
+        </article>
+</body>
+</html>
