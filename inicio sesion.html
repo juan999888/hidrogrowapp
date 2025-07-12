@@ -5,59 +5,316 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de Sesión</title>
   <link rel="stylesheet" href="CSS/index.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
-  <nav class="nav-index">
-    <img class="logo" src="IMG/slogo.png" alt="">
-  <div id="div-nav">
-    <a class="nav" href="index.html">INICIO</a>
-    <a class="nav" href="libros.html">LIBROS</a>
-    <a class="nav" href="registro.html">REGISTRO</a>
-    <a id="nav" href="inicio sesion.html">INICIAR SESIÓN</a>
-  </div>
+   <nav class="nav-index">
+        <img class="logo" src="IMG/slogo.png" alt="">
+      <div id="div-nav">
+        <a class="nav" href="index.html">INICIO</a>
+        <a id="nav" href="libros.html">LIBROS</a>
+        <a class="nav" href="registro.html">REGISTRO</a>
+        <a class="nav" href="inicio sesion.html">INICIAR SESIÓN</a>
+      </div>
+    </nav>
 </nav>
-<article class="caja-blur"><br><br><br><br>
-  <center>
-  <div class="container-login">
-    <h1 class="color-fuente-registro">Iniciar Sesión</h1>
-    <form action="PHP/inicio_s.php" method="post">
-      <div class="form-group-login">
-        <label class="color-fuente-registro" for="n_usu">Nombre de usuario:</label>
-        <input type="text" class="form-control-login" id="n_usu" name="n_usu" placeholder="Introduce tu correo nombre de usuario" name="palabra"required>
+<br> <br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> 
+<style>
+
+
+@import url('https://rsms.me/inter/inter-ui.css');
+::selection {
+  background: #2D2F36;
+}
+::-webkit-selection {
+  background: #2D2F36;
+}
+::-moz-selection {
+  background: #2D2F36;
+}
+body {
+  background-image: url('IMG/lo.webp');
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.page {
+  background-image: url('IMG/lo.webp');
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+@media (max-width: 767px) {
+  .page {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+.container {
+  display: flex;
+  height: 320px;
+  margin: 0 auto;
+  width: 700px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+.left {
+  background: white;
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .left {
+    background: white;
+  width: 40%;
+  height: 240px; /* más baja */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  }
+}
+.login {
+  font-size: 35px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+.eula {
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+   background: #474A59;
+  width: 40%;
+  height: 320px; /* más alta */
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  z-index: 2;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 800px;
+  }
+}
+::placeholder{
+  color: #ffff;
+}
+::submit{
+  color: #ffff;
+}
+svg {
+  position: absolute;
+  bottom: 12px; /* Ajusta esto hasta que coincida justo debajo del input activo */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+  stroke-dashoffset: 0;
+}
+.form {
+  margin: 40px;
+  position: relative;
+  z-index: 2;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 25px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+  font-display: flex;
+  align-items: left;
+  margin-bottom: px;
+  
+}
+input:hover {
+  border-bottom-color: transparent; /* Quita el borde blanco al enfocar */
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+#submit {
+  color: #707075;
+  margin-top: 30px;
+  transition: color 300ms;
+}
+#submit:hover {
+  color: #f2f2f2;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+</style>
+
+
+<article  >
+<form action="PHP/inicio_s.php" id="login-form" method="post" >
+  <div class="container">
+    <div class="left">
+      <div class="login">Iniciar Sesion</div>
+      <div class="eula">Si no tienes cuenta Registrate  <br> <a href="registro.html"> Registrate aqui </a></div>
+    </div>
+    <div class="right">
+      <svg viewBox="0 0 320 300">
+        <defs>
+          <linearGradient
+                          inkscape:collect="always"
+                          id="linearGradient"
+                          x1="0"
+                          y1="0"
+                          x2="1"
+                          y2="0"
+                          gradientUnits="userSpaceOnUse">
+            <stop
+                  style="stop-color:#66b373;"
+                  offset="52%"
+                  id="stop876" />
+            <stop
+                  style="stop-color:#00ffff;"
+                  offset="100%"
+                  id="stop878" />
+          </linearGradient>
+        </defs>
+        <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+      </svg>
+      <div class="form" style="position: relative;">
+        
+        <label for="email">Usuario</label> 
+        <input type="text" id="n_usu" placeholder="Usuario o correo" name="n_usu">
+        
+      <label for="password">Contraseña</label> 
+        <input type="password" id="contra" placeholder="Contraseña" name="contra">
+        <input type="submit" id="submit" value="Iniciar Sesion">
+        <br>
+
+</form>
+
+      
       </div>
-      <div class="form-group-login">
-        <label class="color-fuente-registro" for="contra">Contraseña:</label>
-        <input type="password" class="form-control-login" id="contra" name="contra" placeholder="Introduce tu contraseña" >
-      </div>
-      <input type="submit" class="btn-login" value="iniciar Sesión" >
-      <div class="links-login">
-     
-        <a href="registro.html">¿No tienes cuenta? Regístrate</a>
-      </div>
-    </form>
+      <div id="alerta" style="display:none; position:fixed; top:20px; right:20px; background:#ff4d4f; color:white; padding:12px 20px; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.2); z-index:10000;">
+  ❌ Usuario o contraseña incorrectos
+</div>
+    </div>
+    
   </div>
-  </center>
+
 </article>
-<footer class="footer-index">
-  <table class="table-index" >
-      <tr>
-          <th class="th-index">Politicas de Privacidad</th>
-          <th class="th-index">Nuestras Redes</th>
-          <th class="th-index">Dirección</th>
-          <th class="th-index">Teléfono</th>
-      </tr>
-      <tr>
-          <td class="td-index"><img class="img-footer" src="IMG/facebook.png" alt=""></td>
-          <td class="td-index">Facebook</td>
-          <td class="td-index">Calle 69c #200f-89 </td>
-          <td class="td-index">+57 3001678029</td>
-      </tr><tr>
-          <td class="td-index"><img class="img-footer" src="IMG/instagram.png" alt=""></td>
-          <td class="td-index">Instagram</td>
-          <td class="td-index">Cra 100 #105b-95</td>
-          <td class="td-index">+57 3206557898</td>
-      </tr>
-  </table>
-</footer>
+
+<br> <br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> 
+
 </body>
 </html>
+
+
+<script>
+
+var current = null;
+document.querySelector('#n_usu').addEventListener('mouseenter', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: 0,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '240 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+document.querySelector('#contra').addEventListener('mouseenter', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: -336,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '240 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+document.querySelector('#submit').addEventListener('mouseenter', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: -730,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '530 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+
+  function mostrarAlerta() {
+  const alerta = document.getElementById('alerta');
+  alerta.style.display = 'block';
+  setTimeout(() => {
+    alerta.style.display = 'none';
+  }, 4000);
+}
+</script>
